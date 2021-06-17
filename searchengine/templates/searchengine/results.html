@@ -1,0 +1,20 @@
+{% extends 'searchengine/index.html' %}
+
+{% block content %}
+
+Query: {{ query }}
+
+<br>
+<br>
+Results:
+<br>
+
+{% for locs in urls %}
+    <a href="{% url locs %}"> {{locs}}.html </a>
+    <!-- <a href="#"> {{url}}.html </a> -->
+{% endfor %}
+<!-- <a href="{% url 'aol' %}">Demo result</a> -->
+
+
+{% endblock %}
+
